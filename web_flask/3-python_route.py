@@ -29,9 +29,9 @@ def display_text(text):
 
 
 # Route for '/python/(<text>)'
-@app.route('/python/', strict_slashes=False)
+@app.route('/python/', defaults={'text': 'is cool'}, strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
-def display_python_text(text='is cool'):
+def display_python_text(text):
     # Replace underscore with a space in the text
     text = text.replace('_', ' ')
     return f'Python {text}'
