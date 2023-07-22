@@ -36,6 +36,7 @@ def display_python_text(text):
     text = text.replace('_', ' ')
     return f'Python {text}'
 
+
 # Route for '/number/<n>'
 @app.route('/number/<int:n>', strict_slashes=False)
 def display_number(n):
