@@ -5,7 +5,7 @@
 import cmd
 import json
 import shlex
-from models.engine.file_storage import FileStorage
+from models import storage
 from models.engine.db_storage import DBStorage
 from models.base_model import BaseModel
 from models.user import User
