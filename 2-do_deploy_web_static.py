@@ -26,6 +26,10 @@ def do_deploy(archive_path):
         # Delete the archive
         run("rm /tmp/{}".format(archive_path.split('/')[-1]))
 
+        # Move content out of the sub-folder
+        run("mv /data/web_static/releases/{}/web_static/*\
+             /data/web_static/releases{}/".format(fname,fname))
+
         # Delete the old symbolic link
         run("rm -rf /data/web_static/current")
 
